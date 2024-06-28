@@ -16,3 +16,34 @@ I am confident that my dedication and punctuality will help me achieve success i
 * CSS
 * JavaScript
 * GitHub (Basic)
+
+## *Code example*
+*Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.*
+
+```
+function strCount(str, letter){  
+  count = 0;
+  for (let item of str){
+    if(item == letter){
+      count += 1;
+    }
+  }
+  return count;
+}
+
+strCount("Hello", 'o')
+
+```
+## *Education*
+* Tashkent University of Information Technologies
+
+## *Courses*
+* ItGid course "JavaScript" (completed)
+* Html Academy course profession "Frontend Developer" (in progress)
+* RSS course "JavaScript/Front-end. Stage 0" (in progress)
+
+## *Languages*
+* Russian (native)
+* English (A2)
+* Tajik (basic)
+
