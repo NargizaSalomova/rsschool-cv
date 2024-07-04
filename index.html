@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -73,7 +74,102 @@
             </ul>
           </div>
         </section>
+        <section class="right-side">
+          <div class="about-block">
+            <h2 class="title dark-title">About</h2>
+            <p class="subtitle">
+              Having once started my journey in IT with self-study of the Python programming language, this hobby took a special place in my heart. But coding in Python, I lacked beautiful visualization of projects, which contributed to the transition to studying front-end development. At the moment, several layouts have been created, and with each project I try to improve my code, make it accessible, semantic and easy to read. I can search and analyze information, I know how to plan my time.<br>
+              I am confident that my dedication and punctuality will help me achieve success in the field of front-end development.
+            </p>
+          </div>
+          <div class="education-block">
+            <h2 class="title dark-title">Education</h2>
+            <div class="university-block">
+              <span class="university-year">2006 - 2010</span>
+              <p class="university-name">Tashkent University of Information Technologies</p>
+              <b class="university-faculty">Bachelor of Telecommunication</b>
+            </div>
+          </div>
+          <div class="courses-block">
+            <ul class="courses-list">
+              <li class="courses-item">
+                <p class="courses-name">ItGid course "JavaScript"</p>
+                <img class="courses-certificate" src="./image/certificate.png" width="150" height="100" alt="certificate.">
+              </li>
+              <li class="courses-item">
+                <p class="courses-name">Html Academy course profession "Frontend Developer"</p>
+                <ul class="academy-list">
+                  <li class="academy-item">
+                    <p class="academy-course">HTML and CSS. Professional Website Coding</p>
+                    <img class="academy-certificate" src="./image/academy_first.png" width="100" height="150" alt="certificate.">
+                  </li>
+                  <li class="academy-item">
+                    <p class="academy-course">HTML and CSS. Adaptive layout and automation (in progress)</p>
+                  </li>
+                  <li class="academy-item">
+                    <p class="academy-course">JavaScript. Professional development of Web Interfaces (in future)</p>
+                  </li>
+                  <li class="academy-item">
+                    <p class="academy-course">Preparation of layout for Content Management Systems (CMS) (in future)</p>
+                  </li>
+                  <li class="academy-item">
+                    <p class="academy-course">Layout of React Components (in future)</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="courses-item">
+                <p class="courses-name">RSS course "JavaScript/Front-end. Stage 0" (in progress)</p>
+              </li>
+            </ul>
+          </div>
+          <div class="code-block">
+            <h2 class="title dark-title">Code example</h2>
+            <p class="subtitle"><i>Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.</i></p>
+            <pre>
+            function strCount(str, letter){  
+              count = 0;
+              for (let item of str){
+                if(item == letter){
+                  count += 1;
+                }
+              }
+              return count;
+            }
+            
+            strCount("Hello", 'o')
+            </pre>
+          </div>
+          <div class="layouts-block">
+            <h2 class="title dark-title">My projects</h2>
+            <p class="subtitle"><i>The project code is written semantically and accessible. Component grids are implemented using flex and grid layouts. Various forms and popups were also used.</i></p>
+            <a class="projects-link" href="https://nargizasalomova.github.io/2506775-sedona-1/">
+              <img class="projects-image" src="./image/sedona_project.png" width="150" height="90" alt="project Sedona.">
+            </a>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="https://t.me/Nargiza_Salomova">
+              <span class="visually-hidden">Telegram</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="https://linkedin.com/in/nargizasalomova">
+              <span class="visually-hidden">Linkedin</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="https://linkedin.com/in/nargizasalomova">
+              <span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+        </ul>
+        <a class="rss-logo" href="https://rs.school">
+          <span class="visually-hidden">Go to the RSSchool website</span>
+        </a>
+      </footer>
     </div>
   </body>
 </html>
