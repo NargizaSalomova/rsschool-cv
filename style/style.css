@@ -1,12 +1,87 @@
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/poppins-regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/poppins-semibold.woff2) format("woff2");
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
 body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #878787;
     margin: 0;
-    color: green;
+    height: 100%;
+}
+
+/* General Styles */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.dark-title {
+    font-weight: 600;
+    color: #233a5f;
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.dark-title::after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: #233a5f;
+    border-radius: 4px;
+    display: block;
 }
 
 .page-wrapper {
-    background-color: bisque;
     width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.page-header {
+    min-height: 50px;
+    background-color: #c3c2c2;
+    padding: 12px 70px;
 }
 
 .navigation-list {
@@ -22,6 +97,285 @@ body {
 }
 
 .navigation-link {
+    padding: 10px;
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigation-link:hover {
+    color: #ffffff;
+}
+
+.main-index {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.left-side {
+    background-color: #233a5f;
+    color: #ffffff;
+    padding: 32px 12px;
+}
+
+.cv-photo {
+    margin-bottom: 20px;
+}
+
+.candidate-block {
+    margin-bottom: 20px;
+}
+
+.candidate-name {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.candidate-speciality {
+    margin: 0;
+    font-weight: 400;
+    color: #c3c2c2;
+}
+
+.contacts-block {
+    margin-bottom: 25px;
+}
+
+.contacts-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.contacts-item {
+    background-color: #e5e5e5;
+    border-radius: 4px;
+    padding: 5px 0;
+}
+
+.contacts-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.contacts-link {
+    font-weight: 400;
+    color: #233a5f;
+    padding: 4px 34px 4px 8px;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.contacts-link:hover {
+    color: #375f9e;
+}
+
+.skills-block {
+    margin-bottom: 25px;
+}
+
+.skills-list {
+    margin: 0;
+}
+
+.skills-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.languages-list {
+    margin: 0;
+}
+
+.languages-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.right-side {
+    padding: 32px;
+    background-color: #ffffff;
+}
+
+.about-block {
+    margin-bottom: 25px;
+}
+
+.education-block {
+    margin-bottom: 25px;
+}
+
+.university-block {
+    display: flex;
+    justify-content: space-between;
+    color: #2a2a2a;
+}
+
+.university {
+    padding-left: 18px;
+    position: relative;
+}
+
+.university::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+}
+
+.university-name {
+    margin: 0;
+    font-size: 18px;
+}
+
+.courses-block {
+    margin-bottom: 25px;
+}
+
+.courses-list {
+    margin: 0;
+    list-style-type: none;
+}
+
+.courses-item {
+    position: relative;
+    padding-left: 18px;
+}
+
+.courses-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.courses-item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.courses-name {
+    margin: 0;
+    color: #2a2a2a;
+}
+
+.courses-certificate {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.courses-certificate:hover {
+    transform: scale(3);
+    z-index: 2;
+}
+
+.academy-course {
+    margin: 0;
+}
+
+.academy-list {
+    list-style-type: none;
+}
+
+.academy-item {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.academy-item::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #b4b4b4;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border-radius: 50%;
+}
+
+.code-block {
+    margin-bottom: 25px;
+}
+
+.code {
+    margin: 0;
+    background-color: #e5e5e5;
+    padding: 15px;
+}
+
+.projects-link {
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.projects-link:hover {
+    opacity: 0.7;
+}
+
+.footer {
+    background-color: #c3c2c2;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-list {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.telegram::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-color: #2ca5e0;
+    mask-image: url("../image/logos/telegram.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.linkedin::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-color: #000000;
+    mask-image: url("../image/logos/linkedin.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.github::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-color: #000000;
+    mask-image: url("../image/logos/github.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.rss-logo{
+    display: block;
+    width: 100px;
+    min-height: 32px;
+    background-image: url("../image/logos/rs_school.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
